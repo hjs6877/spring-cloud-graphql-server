@@ -1,0 +1,18 @@
+type Query {
+    getOrder(orderId: ID!): Order
+    getDelivery(orderId: ID!): Delivery
+}
+
+type Order {
+    orderId: Int
+    orderState: String
+}
+
+type Delivery {
+    deliveryId: Int
+    orderId: Int
+    deliveryRiderId: Int
+    deliveryState: String
+    deliveryStartTime: String
+    deliveryEndTime: String
+}
